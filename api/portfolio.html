@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio - André Kaique Dell Isola</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
         }
 
         header {
@@ -24,9 +28,15 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
         nav a {
             color: white;
-            margin: 0 15px;
+            font-size: 1.1rem;
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s ease;
@@ -36,10 +46,30 @@
             color: #FFD700;
         }
 
+        main {
+            margin: 100px auto 0;
+            max-width: 1100px;
+            padding: 30px;
+        }
+
         section {
-            padding: 60px 20px;
-            max-width: 1000px;
-            margin: 80px auto 0;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        h1, h2 {
+            color: #4CAF50;
+            text-align: center;
+        }
+
+        img {
+            display: block; /* Faz a imagem se comportar como um bloco */
+            margin: 20px auto; /* Centraliza a imagem */
+            max-width: 250px;
+            border-radius: 150%;
         }
 
         .fade-in {
@@ -55,24 +85,24 @@
 
         .projeto {
             border: 1px solid #ddd;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            padding: 20px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .projeto:hover {
             transform: scale(1.05);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
         .btn-link {
             display: inline-block;
             background-color: #4CAF50;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 25px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 8px;
             transition: background-color 0.3s;
         }
 
@@ -80,32 +110,11 @@
             background-color: #FFD700;
         }
 
-        #back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            display: none;
-            background: #4CAF50;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 50%;
-            font-size: 18px;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        #back-to-top:hover {
-            transform: scale(1.1);
-            background: #FFD700;
-        }
-
         footer {
             text-align: center;
-            padding: 1rem 0;
+            padding: 1.5rem 0;
             background: #222;
             color: white;
-            margin-top: 20px;
         }
 
         /* Preloader */
@@ -115,7 +124,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.6);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -125,8 +134,8 @@
             border: 4px solid rgba(0, 0, 0, 0.3);
             border-top: 4px solid #4CAF50;
             border-radius: 50%;
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             animation: spin 1s linear infinite;
         }
 
@@ -138,21 +147,33 @@
         /* Responsividade */
         @media (max-width: 768px) {
             header {
-                padding: 0.8rem 1rem;
-            }
-
-            section {
-                padding: 40px 10px;
+                padding: 1rem;
             }
 
             nav a {
                 font-size: 14px;
             }
 
-            #back-to-top {
-                bottom: 10px;
-                right: 10px;
-                font-size: 14px;
+            main {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 0.8rem;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            img {
+                max-width: 120px;
+            }
+
+            .projeto {
+                padding: 15px;
             }
         }
     </style>
@@ -162,10 +183,20 @@
     <div id="preloader">
         <div class="spinner"></div>
     </div>
-    <section id="about" class="fade-in">
+    <section id="about" class="fade-in"><br>
       <h1>André Kaique Dell Isola</h1>
-      <img src="https://lh3.googleusercontent.com/a-/ALV-UjXmnGz4YTMkFM_xzm1d-oojt1vAish2V-546RNaQpr7Sm20FK2J67DH7rbMtN9yxG5-_kqHncvFk-Zay5w3iuo9uJCK6N8vkFGYnT_19Hkmp9IFqDBL_0oMjgcfNYTHtF_lX66XG3jmXh8CzX6E6baPM0PHkmPg1g06tmUYU_Jqe62hCJrT25JLAto4YwwyTQzCW5gha35J9Db9dNGtsoztZB4gCCCX0rUgokDXAPHWNlLF18nPxfTL0pdptcarI3-O039qLyi9gOoXwBVWIZF_c12gIhiQZ9yqDyMWg7QcvNdDGT8BQRntKiqbO2EmUz9R5gq8f13EiGsr33xHVOYWoaGU88I0nTqYf4Tvi5RLtjA5WA6krzu51q6QVRCyVo7LlzjugRyH_W5MPZSKXptJHXgEUy7iy7fAdoopThe3x0mA_G2WjEIFe5pXhpc6bUM7pZYGqvnBjmY1coIbHKlmDswbFgE9N6skZTdzCmUeNjHqy1vdrPUISswQymCZuUkbxcY2Zqto3rkoegS0hba4YOtCbMwV-GLUnHVBF_BHytwAmGl7ra8iehRj8OocJL50ym-ZjxKBgpT5JltVUZY4QMu0sBWfZZK8MQOzkyKxCFhQJ9zGKv5UNcosS6ymu7P9sgKRo0BUpX-0QeMi5d-UzLhVpkM30rRe4PuuXX7f5N6CTXQ3hnsfakKcsu7MjgFHLuWytMBYbnNPQ1tHn7IWoMSi5c1eeHZxWz9T0viPzHwuldsWPzWGZeaSV6e8fx9CR04H3lU9r6LUmwRCowxhyXAOKiGa8tBiLod-BrqaQSoFVcTd3yGcZPkHmxkX6amvABzlrEH-riV53Mb9aRSvPyX2bkyflcKS6JUYrz4wCjlLum6B5P1UYag0hHHSbrdNOJwBfyRBA9ZvTUG-eXhDjuzWJFF68yooyo8ZjgnzNYPS_zQYAiuHtN0Xk7PwL_RM9EYnVjlz6mV_h5qjkMGpeGs=s450-c-no" alt="Foto de André Kaique Dell Isola" style="max-width: 250px; border-radius: 150%; margin: 20px 0;">
-      <p>Sou um profissional dedicado em tecnologia da informação, com foco em suporte técnico, análise de dados e desenvolvimento de sistemas. Busco aprimorar minhas habilidades e contribuir para soluções inovadoras.</p>
+      <img src="https://lh3.googleusercontent.com/a-/ALV-UjXmnGz4YTMkFM_xzm1d-oojt1vAish2V-546RNaQpr7Sm20FK2J67DH7rbMtN9yxG5-_kqHncvFk-Zay5w3iuo9uJCK6N8vkFGYnT_19Hkmp9IFqDBL_0oMjgcfNYTHtF_lX66XG3jmXh8CzX6E6baPM0PHkmPg1g06tmUYU_Jqe62hCJrT25JLAto4YwwyTQzCW5gha35J9Db9dNGtsoztZB4gCCCX0rUgokDXAPHWNlLF18nPxfTL0pdptcarI3-O039qLyi9gOoXwBVWIZF_c12gIhiQZ9yqDyMWg7QcvNdDGT8BQRntKiqbO2EmUz9R5gq8f13EiGsr33xHVOYWoaGU88I0nTqYf4Tvi5RLtjA5WA6krzu51q6QVRCyVo7LlzjugRyH_W5MPZSKXptJHXgEUy7iy7fAdoopThe3x0mA_G2WjEIFe5pXhpc6bUM7pZYGqvnBjmY1coIbHKlmDswbFgE9N6skZTdzCmUeNjHqy1vdrPUISswQymCZuUkbxcY2Zqto3rkoegS0hba4YOtCbMwV-GLUnHVBF_BHytwAmGl7ra8iehRj8OocJL50ym-ZjxKBgpT5JltVUZY4QMu0sBWfZZK8MQOzkyKxCFhQJ9zGKv5UNcosS6ymu7P9sgKRo0BUpX-0QeMi5d-UzLhVpkM30rRe4PuuXX7f5N6CTXQ3hnsfakKcsu7MjgFHLuWytMBYbnNPQ1tHn7IWoMSi5c1eeHZxWz9T0viPzHwuldsWPzWGZeaSV6e8fx9CR04H3lU9r6LUmwRCowxhyXAOKiGa8tBiLod-BrqaQSoFVcTd3yGcZPkHmxkX6amvABzlrEH-riV53Mb9aRSvPyX2bkyflcKS6JUYrz4wCjlLum6B5P1UYag0hHHSbrdNOJwBfyRBA9ZvTUG-eXhDjuzWJFF68yooyo8ZjgnzNYPS_zQYAiuHtN0Xk7PwL_RM9EYnVjlz6mV_h5qjkMGpeGs=s450-c-no" alt="Foto de André Kaique Dell Isola">
+      <p>
+        Descrição dos meus Sonhos e Objetivos 
+        <hr>
+        Sou um profissional altamente focado em Tecnologia da Informação, com grande interesse em atuar nas áreas de <strong>Análise de Suporte</strong> e <strong>Desenvolvimento de Sistemas</strong>. Minha trajetória acadêmica inclui a conclusão do curso de <strong>Análise e Desenvolvimento de Sistemas</strong>, que será formalizada em 2024. Durante a formação, desenvolvi uma sólida compreensão de diversas tecnologias e ferramentas essenciais para o desenvolvimento e suporte de sistemas, como linguagens de programação, redes, bancos de dados e infraestrutura.
+        <br><br>
+        Ao longo dos meus estudos, tive a oportunidade de trabalhar em diversos projetos, tanto individuais quanto em grupo, que me permitiram aprimorar minhas habilidades em resolução de problemas, análise de requisitos e desenvolvimento de soluções eficientes e escaláveis.
+        <br><br>
+        Estou em busca de novas oportunidades de trabalho em <strong>Analista de Suporte</strong> e <strong>Desenvolvimento de Sistemas</strong>, onde possa aplicar meu conhecimento técnico, habilidades de resolução de problemas e meu entusiasmo em aprender novas tecnologias. Meu objetivo é colaborar com equipes dinâmicas e desafiadoras, sempre focando na melhoria contínua e na entrega de soluções de alta qualidade.
+        <hr>
+    </p>
+    
   </section>
     <header>
         <nav>
@@ -178,7 +209,6 @@
     </header>
     <section id="experience" class="fade-in">
       <h2>Experiências</h2>
-      
       <article>
         <h3>WK Tecnologia</h3>
         <ul>
@@ -228,63 +258,18 @@
         </ul>
       </article>
     </section>
-<section id="experience" class="fade-in">
-  <h2>Experiências</h2>
-  
-  <article>
-    <h3>WK Tecnologia</h3>
-    <ul>
-      <li>Troubleshooting, visita técnica presencial e remota.</li>
-      <li>Suporte técnico para empresas terceirizadas.</li>
-      <li>Manutenção de computadores e notebooks.</li>
-      <li>Backup via nuvem ou HD externo (pasta usuários).</li>
-      <li>Cabeamento estruturado e limpeza de hardware/software.</li>
-      <li>Análises de hardware/software nível 1.</li>
-      <li>Formatação de sistemas Windows 10 e 11.</li>
-      <li>Implementação de softwares.</li>
-      <li>Lavagem de placas e circuitos eletrônicos.</li>
-      <li>Limpeza de arquivos temporários (CCleaner).</li>
-      <li>Atualização de antivírus e sistema operacional.</li>
-      <li>Identificação de falhas e suas origens.</li>
-      <li>Substituição de componentes, quando necessário.</li>
-      <li>Avaliação de desempenho e desinstalação de softwares não utilizados.</li>
-      <li>Manutenção interna: limpeza de coolers, reorganização de cabos, troca de pasta térmica.</li>
-      <li>Correções de bugs, implementação e desinstalação de softwares (Revo Uninstaller).</li>
-      <li>Auxílio em Active Directory: criação de usuários e grupos de trabalho.</li>
-    </ul>
-  </article>
-  
-  <article>
-    <h3>Escola Almeida Santos</h3>
-    <ul>
-      <li>Atendimento presencial e remoto a alunos e funcionários.</li>
-      <li>Configuração de usuários pelo PROTHEUS RM.</li>
-      <li>Criação de usuários para novos alunos e funcionários.</li>
-      <li>Manutenção de computadores e monitoramento do site da escola.</li>
-    </ul>
-  </article>
-  
-  <article>
-    <h3>To The Top Serviços Terceirizados</h3>
-    <ul>
-      <li><strong>Gestão de ferramentas Google:</strong> administração de Gmail, Google Drive, Google Calendar e mais.</li>
-      <li><strong>Controle de equipamentos:</strong> acompanhamento e registro de notebooks e celulares.</li>
-      <li><strong>Gerenciamento de usuários via Admin Google:</strong> criação e manutenção de contas de usuário.</li>
-      <li><strong>Criação de e-mails:</strong> configuração de contas para funcionários.</li>
-    </ul>
-    <h4>Projetos</h4>
-    <ul>
-      <li>Documentação detalhada da infraestrutura de redes e T.I.</li>
-      <li>Reinicialização e documentação de câmeras de segurança com login e senha para futuros funcionários.</li>
-      <li>Desenvolvimento de um sistema para criação de pastas no Google Drive para projetos futuros, como obras.</li>
-    </ul>
-  </article>
-</section>
-    
-
     <section id="skills" class="fade-in">
         <h2>Habilidades</h2>
-        <p>SQL, Power BI, Troubleshooting, C++, Google Admin, e mais.</p>
+        <p>Linguagem Querie SQL(BANCO DE DADOS) <br>
+            Power BI Dashboards <br>
+            Troubleshooting <br>
+            Linguagem de Programação C <br>
+            Google Admin <br>
+            Python Framework Flask<br>
+            Javascript + HTML + CSS<br>
+            Conhecimento em sistemas operacionais Windows 7,8,10,11<br>
+            Automação Google Sheets ( Planilhas Google )
+            </p>
     </section>
 
     <section id="projects" class="fade-in">
@@ -319,18 +304,29 @@
          <p>Usando <strong>HTML, CSS e JavaScript</strong> como <strong>FRONTEND</strong></p>
          <p><strong>Hospedagem em GOOGLE DRIVE E GOOGLE PLANILHAS</strong></p>
          <p><strong>Descrição do Projeto:</strong> Este sistema foi projetado para automatizar a criação e a gestão de propostas. O foco principal é o uso de uma <strong>planilha do Google</strong>, onde a coleta de informações de propostas e funcionários pode ser feita de maneira fácil e organizada. As operações <strong>CRUD</strong> são implementadas para permitir a criação, leitura, atualização e exclusão de registros. Além disso, há um filtro de obras com base em parâmetros específicos, como <strong>ID, Nome do Funcionário, Empresa</strong> e a obra onde o funcionário está alocado.</p>
-         <p><strong>Detalhes Técnicos:</strong> O projeto segue uma estrutura com códigos que gerenciam <strong>TP Números</strong> e <strong>TP Nomes</strong>, sendo o <strong>TP Número</strong> composto por sequências alfanuméricas, enquanto o <strong>TP Nome</strong> é formado por letras com acentos especiais.</p>
-         <a href="https://docs.google.com/spreadsheets/d/11jz3CIYnbO1lmvGvWC8mDMySoo3gqteAfAQJ2gZO0rE/edit?gid=1024781287#gid=1024781287" target="_blank" class="btn-link"><strong>Ver Projeto</strong></a>
+         <p><strong>Detalhes Técnicos:</strong>Projeto Consite em uma geração de propostas automatizada. Onde é salvo todo Historico de propostas já gerados anteriormente, juntamente com uma ferramenta onde é possivel recuperar propostas na pagina <strong>HISTORICO.</strong></strong>
+        <br>Ao gerar a proposta, a empresa recebe no email a proposta em PDF, mais o numero gerado da proposta dela.
+        </p>
+         <a href="https://docs.google.com/spreadsheets/d/11jz3CIYnbO1lmvGvWC8mDMySoo3gqteAfAQJ2gZO0rE/edit?gid=1024781287#gid=1024781287" target="_blank" class="btn-link"><strong>Ver Projeto</strong><br>
+        
+        </a>
      </div>
      
      
     </section>
-
-    <section id="contact" class="fade-in">
-        <h2>Contato</h2>
-        <p>E-mail: andrekaidellisola@gmail.com</p>
-        <p>Telefone: +55 11 96802-9600</p>
-    </section>
+    <main>
+        <section id="contact" class="fade-in">
+            <h2>Contato</h2>
+            <p>E-mail: andrekaidellisola@gmail.com</p>
+            <p>Telefone: +55 11 96802-9600</p>
+            <a href="https://www.linkedin.com/in/andre-kaique-dell-isola-313079160/" target="_blank" class="btn-link">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/AndrekaiqueDevjunior" target="_blank" class="btn-link">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </section>
+    </main>
 
     <button id="back-to-top" aria-label="Voltar ao topo">⬆️</button>
 
